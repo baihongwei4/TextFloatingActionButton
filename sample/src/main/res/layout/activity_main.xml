@@ -6,30 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.homeway.textfab.TextFloatingActionButton
         android:id="@+id/textFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="64dp"
         android:clickable="true"
         android:elevation="10dp"
         android:focusable="true"
         app:borderWidth="0dp"
         app:fabCustomSize="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:maxImageSize="35dp"
         app:rippleColor="#ffffff"
         app:tint="#ffffff" />
+
+    <Switch
+        android:id="@+id/switchIconOrText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Icon"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/switchIconOrText"
+        app:layout_constraintEnd_toStartOf="@id/switchIconOrText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Text"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/switchIconOrText"
+        app:layout_constraintStart_toEndOf="@id/switchIconOrText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
